@@ -1,3 +1,5 @@
+let jobsCall = "";
+
 (function () {
   var myConnector = tableau.makeConnector();
 
@@ -102,7 +104,7 @@
   };
 
   myConnector.getData = function (table, doneCallback) {
-    $.getJSON("https://api.servicetitan.com/v1/jobs?filter.createdAfter=2017-01-01T00%3A00%3A00.000&filter.pageSize=30000&serviceTitanApiKey=8e9891b0-181b-4f74-9455-0195f66623d7", function (resp) {
+    $.getJSON(jobsCall, function (resp) {
       var feat = resp.data,
         tableData = [];
 
@@ -160,6 +162,9 @@
 
 $(document).ready(function () {
   $("#submitButton").click(function () {
+    let pageSize = $('#pageSize').val();
+    let createdAfter = $('#createdAfter').val();
+    let jobsCall = "https://api.servicetitan.com/v1/jobs?filter.createdAfter=" + createdAfter + "&filter.pageSize=" + pageSize + "&serviceTitanApiKey=8e9891b0-181b-4f74-9455-0195f66623d7"
     tableau.connectionName = "Randy's Electric Jobs Data";
     tableau.submit();
   });
