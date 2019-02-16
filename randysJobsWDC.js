@@ -87,6 +87,11 @@
       dataType: tableau.dataTypeEnum.string
     },
     {
+      id: "status",
+      alias: "Job Status",
+      dataType: tableau.dataTypeEnum.string
+    },
+    {
       id: "leadCallUrl",
       alias: "Lead Call Recording URL",
       dataType: tableau.dataTypeEnum.string
@@ -128,6 +133,7 @@
             "invoiceTotal": feat[i].invoice.total,
             "leadCallId": feat[i].leadCall.id,
             "leadCallDuration": feat[i].leadCall.duration,
+            "status": feat[i].status,
             "leadCallUrl": feat[i].leadCall.recordingUrl
           })
         } else {
@@ -148,6 +154,7 @@
             "scheduledOn": feat[i].scheduledOn,
             "invoiceId": feat[i].invoice.id,
             "invoiceTotal": feat[i].invoice.total,
+            "status": feat[i].status,
           })
         };
       }
