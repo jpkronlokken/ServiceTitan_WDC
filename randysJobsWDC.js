@@ -102,7 +102,7 @@
       dataType: tableau.dataTypeEnum.string
     },
     {
-      id: "locationid",
+      id: "locationId",
       alias: "Location ID",
       dataType: tableau.dataTypeEnum.float
     },
@@ -161,7 +161,7 @@
             "status": feat[i].status,
             "leadCallUrl": feat[i].leadCall.recordingUrl,
             "Active": feat[i].active,
-            "locationID": feat[i].location.id,
+            "locationId": feat[i].location.id,
             "noCharge": feat[i].nocharge,
             "completedOn": feat[i].completedOn,
             "projectId": feat[i].projectId
@@ -186,7 +186,7 @@
             "invoiceTotal": feat[i].invoice.total,
             "status": feat[i].status,
             "Active": feat[i].active,
-            "locationID": feat[i].location.id,
+            "locationId": feat[i].location.id,
             "noCharge": feat[i].nocharge,
             "completedOn": feat[i].completedOn,
             "projectId": feat[i].projectId
