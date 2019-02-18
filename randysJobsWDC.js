@@ -95,7 +95,27 @@
       id: "leadCallUrl",
       alias: "Lead Call Recording URL",
       dataType: tableau.dataTypeEnum.string
-    }
+    },
+    {
+      id: "active",
+      alias: "Active",
+      dataType: tableau.dataTypeEnum.string
+    },
+    {
+      id: "locationid",
+      alias: "Location ID",
+      dataType: tableau.dataTypeEnum.float
+    },
+    {
+      id: "nocharge",
+      alias: "No Charge",
+      dataType: tableau.dataTypeEnum.string
+    },
+    {
+      id: "completedOn",
+      alias: "Completed On",
+      dataType: tableau.dataTypeEnum.string
+    } 
     ];
 
     var tableSchema = {
@@ -134,7 +154,11 @@
             "leadCallId": feat[i].leadCall.id,
             "leadCallDuration": feat[i].leadCall.duration,
             "status": feat[i].status,
-            "leadCallUrl": feat[i].leadCall.recordingUrl
+            "leadCallUrl": feat[i].leadCall.recordingUrl,
+            "Active": feat[i].active,
+            "locationID": feat[i].location.id,
+            "noCharge": feat[i].nocharge,
+            "completedOn": feat[i].completedOn
           })
         } else {
           tableData.push({
@@ -155,6 +179,10 @@
             "invoiceId": feat[i].invoice.id,
             "invoiceTotal": feat[i].invoice.total,
             "status": feat[i].status,
+            "Active": feat[i].active,
+            "locationID": feat[i].location.id,
+            "noCharge": feat[i].nocharge,
+            "completedOn": feat[i].completedOn
           })
         };
       }
