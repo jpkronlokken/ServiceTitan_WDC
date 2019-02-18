@@ -117,7 +117,7 @@
       dataType: tableau.dataTypeEnum.string
     },
     {
-      id: "projectID",
+      id: "projectId",
       alias: "Project ID",
       dataType: tableau.dataTypeEnum.float
     } 
