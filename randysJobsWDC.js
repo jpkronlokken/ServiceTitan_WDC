@@ -115,6 +115,11 @@
       id: "completedOn",
       alias: "Completed On",
       dataType: tableau.dataTypeEnum.string
+    },
+    {
+      id: "projectID",
+      alias: "Project ID",
+      dataType: tableau.dataTypeEnum.float
     } 
     ];
 
@@ -158,7 +163,8 @@
             "Active": feat[i].active,
             "locationID": feat[i].location.id,
             "noCharge": feat[i].nocharge,
-            "completedOn": feat[i].completedOn
+            "completedOn": feat[i].completedOn,
+            "projectId": feat[i].projectId
           })
         } else {
           tableData.push({
@@ -182,7 +188,8 @@
             "Active": feat[i].active,
             "locationID": feat[i].location.id,
             "noCharge": feat[i].nocharge,
-            "completedOn": feat[i].completedOn
+            "completedOn": feat[i].completedOn,
+            "projectId": feat[i].projectId
           })
         };
       }
