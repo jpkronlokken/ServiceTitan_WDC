@@ -14,11 +14,23 @@
       id: "zip",
       alias: "Zip",
       dataType: tableau.dataTypeEnum.float
-    }, {
+    }, 
+    {
+      id: "address",
+      alias: "Address",
+      dataType: tableau.dataTypeEnum.float
+    }, 
+    {
+      id: "state",
+      alias: "State",
+      dataType: tableau.dataTypeEnum.float
+    }, 
+    {
       id: "lat",
       alias: "Latitude",
       dataType: tableau.dataTypeEnum.float
-    }, {
+    }, 
+    {
       id: "long",
       alias: "Longitude",
       dataType: tableau.dataTypeEnum.float
@@ -150,6 +162,8 @@
             "city": feat[i].location.address.city,
             "zip": feat[i].location.address.zip,
             "lat": feat[i].location.address.latitude,
+            "address": feat[i].location.address.street,
+            "state": feat[i].location.address.state,
             "long": feat[i].location.address.longitude,
             "custCreatedOn": feat[i].customer.createdOn,
             "createdOn": feat[i].createdOn,
@@ -179,6 +193,8 @@
             "zip": feat[i].location.address.zip,
             "lat": feat[i].location.address.latitude,
             "long": feat[i].location.address.longitude,
+            "address": feat[i].location.address.street,
+            "state": feat[i].location.address.state,
             "custCreatedOn": feat[i].customer.createdOn,
             "createdOn": feat[i].createdOn,
             "scheduledOn": feat[i].scheduledOn,
