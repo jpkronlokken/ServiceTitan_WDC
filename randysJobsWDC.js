@@ -178,7 +178,7 @@
             "locationId": feat[i].location.id,
             "noCharge": feat[i].nocharge,
             "completedOn": feat[i].completedOn,
-            "projectId": feat[i].projectId,
+            "projectId": feat[i].projectId
           })
         } else {
           tableData.push({
@@ -205,7 +205,7 @@
             "locationId": feat[i].location.id,
             "noCharge": feat[i].nocharge,
             "completedOn": feat[i].completedOn,
-            "projectId": feat[i].projectId,
+            "projectId": feat[i].projectId
           })
         };
       }
