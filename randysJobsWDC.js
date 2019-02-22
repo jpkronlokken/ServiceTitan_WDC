@@ -18,12 +18,12 @@
     {
       id: "address",
       alias: "Address",
-      dataType: tableau.dataTypeEnum.float
+      dataType: tableau.dataTypeEnum.string
     }, 
     {
       id: "state",
       alias: "State",
-      dataType: tableau.dataTypeEnum.float
+      dataType: tableau.dataTypeEnum.string
     }, 
     {
       id: "lat",
