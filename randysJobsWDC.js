@@ -132,11 +132,6 @@
       id: "projectId",
       alias: "Project ID",
       dataType: tableau.dataTypeEnum.float
-    },
-    {
-      id: "technicianAssigned",
-      alias: "Technician Assigned",
-      dataType: tableau.dataTypeEnum.string
     }
     ];
 
@@ -151,7 +146,6 @@
   myConnector.getData = function (table, doneCallback) {
     $.getJSON("https://api.servicetitan.com/v1/jobs?filter.createdAfter=2017-01-01T00%3A00%3A00.000&filter.pageSize=30000&serviceTitanApiKey=8e9891b0-181b-4f74-9455-0195f66623d7", function (resp) {
       var feat = resp.data,
-      var assign = resp.data.jobAssignments,
         tableData = [];
 
       // Iterate over the JSON object
@@ -185,7 +179,6 @@
             "noCharge": feat[i].nocharge,
             "completedOn": feat[i].completedOn,
             "projectId": feat[i].projectId,
-            "technicianAssigned": assign[i].technician.name
           })
         } else {
           tableData.push({
@@ -213,7 +206,6 @@
             "noCharge": feat[i].nocharge,
             "completedOn": feat[i].completedOn,
             "projectId": feat[i].projectId,
-            "technicianAssigned": assign[i].technician.name
           })
         };
       }
