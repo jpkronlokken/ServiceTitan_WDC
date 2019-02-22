@@ -134,15 +134,10 @@
       dataType: tableau.dataTypeEnum.float
     },
     {
-      id: "technician",
-      alias: "Technician",
+      id: "technicianAssigned",
+      alias: "Technician Assigned",
       dataType: tableau.dataTypeEnum.string
-    },
-    {
-      id: "technicianActive",
-      alias: "Technician Active",
-      dataType: tableau.dataTypeEnum.string
-    } 
+    }
     ];
 
     var tableSchema = {
@@ -189,8 +184,7 @@
             "noCharge": feat[i].nocharge,
             "completedOn": feat[i].completedOn,
             "projectId": feat[i].projectId,
-            "technician": feat[i].history.technician.name,
-            "technicianActive": feat[i].history.technician.active
+            "technicianAssigned": feat[i].jobAssignments.technician.name
           })
         } else {
           tableData.push({
@@ -218,8 +212,7 @@
             "noCharge": feat[i].nocharge,
             "completedOn": feat[i].completedOn,
             "projectId": feat[i].projectId,
-            "technician": feat[i].history.technician.name,
-            "technicianActive": feat[i].history.technician.active
+            "technicianAssigned": feat[i].jobAssignments.technician.name
           })
         };
       }
