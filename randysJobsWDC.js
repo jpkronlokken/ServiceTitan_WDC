@@ -86,7 +86,7 @@
     {
       id: "invoiceTotal",
       alias: "Invoice Total",
-      dataType: tableau.dataTypeEnum.string
+      dataType: tableau.dataTypeEnum.float
     },
     {
       id: "leadCallId",
